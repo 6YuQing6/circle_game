@@ -8,11 +8,10 @@ const config = {
       pixelArt: true,
     },
     physics: {
-      default: "matter",
+      default: "arcade",
       arcade: {
-        debug: false,
+        debug: true,
         gravity: {
-          x: 0,
           y: 0,
         },
       },
