@@ -3,8 +3,11 @@ class Floating extends Phaser.Scene {
       super("FloatScene");
     }
     create(){
-        this.matter.world.setBounds(0, 0, game.config.width, game.config.height);
-        this.circle = this.matter.add.polygon(game.config.width/2, game.config.height/2, 50, 70, {restitution: 0.9})
+        this.circle = this.add.circle(400, 300, 20, 0xff0000)
+        this.physics.add.existing(this.circle)
+        this.circle.body.setBounce(1)
+        this.circle.body.setCollideWorldBounds(true)
+        this.circle.body.setVelocity(100,100)
     }
     update(){
 
