@@ -14,5 +14,7 @@ class Floating extends Phaser.Scene {
     });
     this.circleGroup.add(this.circle);
   }
-  update() {}
+  update() {
+    this.physics.add.collider(this.circleGroup, this.circleGroup);
+  }
 }
